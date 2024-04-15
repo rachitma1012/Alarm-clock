@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+/* outer container */
+.container{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(217deg,blue,#30197d);
+
+}
+/* container conain clock input and collection of alarm*/
+.inner-container{
+    background:rgba(235,0,255, 0.11);
+    width:70%;
+    height: 60%;
+
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 5%;
+    border-radius: 2%;
+   
+    backdrop-filter: blur(70px);
+    
+}
+/* displaying the persent time */
+.clock{
+    font-size: 350%;
+    text-align: center;
+    position: relative;
+    top: 10%;
+    color: beige;
+    font-family: "Roboto Mono";
+}
+/* div contain input */
+.timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    margin-top: 15%;
+}
+/* input element for setting a timer for alarm */
+.timer input{
+    width: 13%;
+    border: 1.5px solid darkblue;
+    border-radius: 12%;
+    padding: 1% 2%;
+    position: absolute;
+    top: 35%;
+}
+.timer input:hover{
+    border: 2px solid red; 
+}
+/* button for creating a alarm */
+#set{
+    height:10%;
+    width: 17%;
+    background:#7ea3e8;
+    border: none;
+    padding: 1% 2.5%;
+    display: block;
+    border-radius: 40%;
+    color: #fff;
+    position: absolute;
+    left: 41.5%;
+    top: 54%;
+}
+#set:hover{
+    color: black;
+    background-color: antiquewhite;
+}
+/* div for showing collection of  alarm */
+.actalarm{
+    overflow: auto;
+    height: 29%;
+    width: 100%;
+    background-color:rgba(29, 25, 27, 0.2);
+    position: absolute;
+    top:70%;
+    
+    border-radius: 1%;
+}
+/* div for conatining a alarm */
+.alarm{
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: space-around; 
+    margin-top: 5%;
+    align-items: center;
+    border-bottom: 1px solid #898f9b;
+    padding-bottom: 0.6em;
+    color: rgba(245, 39, 39, 0.8);
+    
+}
+/* css for modifying input type checkbox */
+.alarm input[type="checkbox"]{
+    appearance: none;
+    height:2em;
+    width:3.75em;
+    background-color: #e2e2ec;
+    border-radius: 1.5em;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+}
+.alarm input[type="checkbox"]:before{
+    position: absolute;
+    content: "";
+    background-color: #757683;
+    height: 1.43em;
+    width: 1.43em;
+    border-radius: 50%;
+    top: 0.25em;
+    left: 0.25rm;
+}
+.alarm input[type="checkbox"]:checked{
+    background-color: #d2effd;
+}
+.alarm input[type="checkbox"]:checked:before{
+    background-color: #377dff;
+    left:2em
+}
+/* css for deleting button */
+.deleteButton{
+    background-color: transparent;
+    font-size: 1.5em;
+    color: #377dff;
+    border: none;
+    cursor: pointer;
+}
+
+/* for responsiveness of the pafe */
+@media screen and (max-width:600px){
+    .timer input{
+        width: 30%;
+    }
+    .clock{
+        font-size: 289%;
+    }
+    #set{
+        
+        width: 30%;
+        left: 35%;
+    }
+    .alarm input[type="checkbox"]{
+    
+        height:2em;
+        width:3.75em;
+    
+    }
+    
+}
+
+@media screen and (max-width:420px){
+   .timer input{
+    top:30%
+   }
+   .clock{
+    top: 7%;
+   }
+   #set{
+    top:47% ;
+   }
+   .inner-container{
+    height: 46%;
+   }
+   .actalarm{
+    top: 70%;
+   }
+}

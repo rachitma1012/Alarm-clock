@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/6a2bc73bcb.js" crossorigin="anonymous"></script>
+<!-- connection for css file -->
+    <link rel="stylesheet" href="alarm.css">
+    <title>Document</title>
+
+</head>
+<body>
+     <!-- container containing all elements -->
+    <div class="container">
+        <!-- inner container containing clock and alarm -->
+        <div class="inner-container">
+            <!-- div for displaying the current time  -->
+            <div class="clock">00:00:00</div>
+              <!-- div for conatining a input box which is used for setting alarm -->
+            <div class="timer">
+                <input type="time" id="hrinput" />
+                
+            </div>
+             <!-- button for creating a alarm  -->
+            <button id="set">Set Alarm</button>
+            <!-- div conatining all alarms -->
+            <div class="actalarm"></div>
+        </div>
+    </div>
+ <!-- connection for javascript  file  -->
+    <script src="alarm.js"></script>
+</body>
+</html>
